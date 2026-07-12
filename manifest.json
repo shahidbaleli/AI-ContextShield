@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "AI ContextShield",
+  "version": "2.0",
+  "description": "Auto-saves chat history locally and injects context via on-screen modal.",
+  "icons": {
+    "16": "icons/11.png",
+    "48": "icons/11.png",
+    "128": "icons/11.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://www.perplexity.ai/*",
+    "https://chat.deepseek.com/*",
+    "https://chat.mistral.ai/*",
+    "https://huggingface.co/chat/*",
+    "https://kimi.moonshot.cn/*",
+    "https://poe.com/*",
+    "https://www.meta.ai/*",
+    "https://copilot.microsoft.com/*",
+    "https://pi.ai/*",
+    "https://chatglm.cn/*",
+    "https://you.com/*",
+    "https://www.phind.com/*",
+    "https://chat.qwen.ai/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://www.perplexity.ai/*",
+        "https://chat.deepseek.com/*",
+        "https://chat.mistral.ai/*",
+        "https://huggingface.co/chat/*",
+        "https://kimi.moonshot.cn/*",
+        "https://poe.com/*",
+        "https://www.meta.ai/*",
+        "https://copilot.microsoft.com/*",
+        "https://pi.ai/*",
+        "https://chatglm.cn/*",
+        "https://you.com/*",
+        "https://www.phind.com/*",
+        "https://chat.qwen.ai/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
